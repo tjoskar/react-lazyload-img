@@ -1,2 +1,7 @@
 !dist
 src
+.editorconfig
+.prettierignore
+.travis.yml
+tsconfig.json
+wallaby.js
