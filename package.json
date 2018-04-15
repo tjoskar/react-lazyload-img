@@ -1,0 +1,57 @@
+{
+  "name": "@tjoskar/react-lazyload-img",
+  "public": true,
+  "description": "Lazy image loader for react",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "compile": "npx tsc"
+  },
+  "author": "tjoskar <kontakta@oskarkarlsson.nu>",
+  "bugs": {
+    "url": "https://github.com/tjoskar/react-lazyload-img/issues",
+    "email": "kontakta@oskarkarlsson.nu"
+  },
+  "dependencies": {
+    "simple-spy": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.10",
+    "@types/react-dom": "^16.0.5",
+    "jest": "^22.4.3",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "ts-jest": "^22.4.3",
+    "typescript": "2.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=15.0.0",
+    "react-dom": ">=15.0.0"
+  },
+  "homepage": "https://github.com/tjoskar/react-lazyload-img",
+  "keywords": [
+    "react",
+    "lazyload",
+    "image"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjoskar/react-lazyload-img"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/.*\\.(test|spec)\\.(ts|tsx|js)$",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  }
+}
