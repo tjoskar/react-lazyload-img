@@ -36,6 +36,8 @@ class App extends Component {
 
 You can also pass options (`root`, `rootMargin`, `threshold`) to the IntersectionObserver constructor. See the [documentation for IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) for more info.
 
+See: https://stackblitz.com/edit/react-lazy-load-image for examples
+
 ## Props
 
 Both `LazyLoadImage` and `LazyLoadBackgroundImage` have the same props:
