@@ -55,7 +55,7 @@ Both `LazyLoadImage` and `LazyLoadBackgroundImage` have the same props:
 
 ## Requirement
 
-The browser you are targeting needs to have support for `IntersectionObserver` and `WeakMap` or import polyfill for them. You also need to use a bundler that understand es-mudules (eg. webpack, rollup, parcel, fusebox, etc.)
+The browser you are targeting needs to have support for `IntersectionObserver` and `WeakMap` or you need to import polyfill for them. You also need to use a bundler that understand es-modules (eg. webpack, rollup, parcel, fusebox, etc.)
 
 ## License
 
