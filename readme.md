@@ -14,7 +14,7 @@ $ npm install @tjoskar/react-lazyload-img
 
 ```jsx
 import React, { Component } from 'react';
-import { LazyLoadImage, LazyLoadBackgroundImage } from './lazy-load-image'
+import { LazyLoadImage, LazyLoadBackgroundImage } from '@tjoskar/react-lazyload-img'
 
 class App extends Component {
   defaultImage = 'https://www.placecage.com/1000/1000';
