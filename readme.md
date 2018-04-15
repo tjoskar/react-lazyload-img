@@ -13,23 +13,23 @@ $ npm install @tjoskar/react-lazyload-img
 ## Usage
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { LazyLoadImage, LazyLoadBackgroundImage } from '@tjoskar/react-lazyload-img'
 
 class App extends Component {
-  defaultImage = 'https://www.placecage.com/1000/1000';
-  image = 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg';
+  defaultImage = 'https://www.placecage.com/1000/1000'
+  image = 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg'
 
   render() {
     return (
       <React.Fragment>
-        { /* To use img-tag */ }
+        { /* To use a img-tag */ }
         <LazyLoadImage width="50" height="200px" defaultImage={this.defaultImage} image={this.image} />
 
-        { /* To use div-tag with background image styling */ }
+        { /* To use a div-tag with background image styling */ }
         <LazyLoadBackgroundImage width="100%" height="200px" defaultImage={this.defaultImage} image={this.image} />
       </React.Fragment>
-    );
+    )
   }
 }
 ```
