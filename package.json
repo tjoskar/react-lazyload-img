@@ -2,7 +2,7 @@
   "name": "@tjoskar/react-lazyload-img",
   "public": true,
   "description": "Lazy image loader for react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "test": "jest",
     "compile": "npx tsc"

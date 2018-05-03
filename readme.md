@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <React.Fragment>
         { /* To use a img-tag */ }
-        <LazyLoadImage width="50" height="200px" defaultImage={this.defaultImage} image={this.image} />
+        <LazyLoadImage width={50} height="200px" defaultImage={this.defaultImage} image={this.image} />
 
         { /* To use a div-tag with background image styling */ }
         <LazyLoadBackgroundImage width="100%" height="200px" defaultImage={this.defaultImage} image={this.image} />
@@ -49,8 +49,8 @@ Both `LazyLoadImage` and `LazyLoadBackgroundImage` have the same props:
   onLoaded?: () => void // Callback function after the image has been loaded
   options?: ObserverOptions
   style?: Object // Will be passed to the under lying div/img tag
-  height: number | string // The height of the image
-  width: number | string // The width of the image
+  height: number | string // The height of the image (can be set to `auto`)
+  width: number | string // The width of the image (can be set to `auto`)
 ```
 
 ## Requirement

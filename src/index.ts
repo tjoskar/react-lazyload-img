@@ -21,10 +21,16 @@ export abstract class LazyLoad extends React.Component<Props> {
 }
 
 export class LazyLoadImage extends LazyLoad {
+  style = Object.assign({}, this.props.style, {
+    height: this.props.height,
+    width: this.props.width
+  })
+
   render() {
     return React.createElement('img', {
       ref: el => (this.ref = el),
-      src: this.props.defaultImage
+      src: this.props.defaultImage,
+      style: this.style
     })
   }
 }
