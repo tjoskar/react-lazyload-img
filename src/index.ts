@@ -43,6 +43,10 @@ export class LazyLoadBackgroundImage extends LazyLoad {
   })
 
   render() {
-    return React.createElement('div', { ref: el => (this.ref = el), style: this.style })
+    return React.createElement(
+      'div',
+      { ref: el => (this.ref = el), style: this.style },
+      this.props.children
+    )
   }
 }
