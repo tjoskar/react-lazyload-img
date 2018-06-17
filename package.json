@@ -51,6 +51,8 @@
       "ts",
       "js",
       "json"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
