@@ -14,12 +14,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "23.0.0",
+    "@types/jest": "23.1.0",
     "@types/react": "16.3.18",
     "@types/react-dom": "16.0.6",
     "jest": "23.1.0",
-    "react": "16.4.0",
-    "react-dom": "16.4.0",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
     "simple-spy": "2.2.1",
     "ts-jest": "22.4.6",
     "typescript": "2.9.2"
