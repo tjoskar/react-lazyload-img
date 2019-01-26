@@ -2,10 +2,10 @@
   "name": "@tjoskar/react-lazyload-img",
   "public": true,
   "description": "Lazy image loader for react",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scripts": {
     "test": "jest",
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "tsc --module commonjs --target es2015 --outDir dist/cjs && tsc --module es2015 --target es2015 --outDir dist/es2015",
     "start": "parcel example/index.html"
   },
   "author": "tjoskar <kontakta@oskarkarlsson.nu>",
@@ -37,8 +37,9 @@
     "image"
   ],
   "license": "MIT",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es2015/index.js",
+  "types": "./dist/es2015/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/tjoskar/react-lazyload-img"
