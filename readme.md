@@ -42,8 +42,6 @@ See: https://stackblitz.com/edit/react-lazy-load-image for examples
 
 Both `LazyLoadImage` and `LazyLoadBackgroundImage` have the same props:
 
-#### props
-
 ##### defaultImage
 
 Type: `string`<br>
