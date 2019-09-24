@@ -21,7 +21,7 @@ const App = () => {
   const image = 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg'
   return (
     <>
-      { /* To use a img-tag */ }
+      { /* To use an img-tag */ }
       <LazyLoadImage width={50} height="200px" defaultImage={this.defaultImage} image={this.image} />
 
       { /* To use a div-tag with background image styling */ }
