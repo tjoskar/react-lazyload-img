@@ -1,4 +1,4 @@
-import { ObserverOptions, IntersectionObserverEntryType, Props } from './types'
+import { ObserverOptions, IntersectionObserverEntryType, UnionProps } from './types'
 
 const defaultObserverOptions: ObserverOptions = {
   root: undefined,
@@ -8,7 +8,7 @@ const defaultObserverOptions: ObserverOptions = {
 
 const observerKeys: ObserverOptions[] = []
 const observers = new WeakMap<ObserverOptions, IntersectionObserver>()
-const images = new WeakMap<Element, { observer: IntersectionObserver; options: Props }>()
+const images = new WeakMap<Element, { observer: IntersectionObserver; options: UnionProps }>()
 
 export const call = fn => fn && fn()
 export const isNull = <T>(obj: T | null): obj is null => obj === null
@@ -72,7 +72,7 @@ export function addCssClassName(
   }
 }
 
-export function registerImageToLazyLoad(element: Element, metadata: Props) {
+export function registerImageToLazyLoad(element: Element, metadata: UnionProps) {
   const options = metadata.options || defaultObserverOptions
   let observerKey = observerKeys.find(
     oKey =>
