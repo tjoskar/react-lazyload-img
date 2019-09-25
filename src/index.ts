@@ -23,31 +23,37 @@ abstract class LazyLoad<T extends Props> extends Component<T> {
 }
 
 export class LazyLoadImage extends LazyLoad<ImgProps> {
-  style = Object.assign({}, this.props.style, {
-    height: this.props.height,
-    width: this.props.width
-  })
-
   render() {
-    return createElement('img', {
-      ref: el => (this.ref = el),
-      src: this.props.defaultImage,
-      style: this.style
-    })
+    const {style: incomingStyle, height, width, image, errorImage, options, onLoaded, defaultImage: src, ...props} = this.props
+
+    const style = {
+      ...incomingStyle,
+      height,
+      width
+    }
+
+    return createElement(
+      'img',
+      {...props, ref: el => (this.ref = el), style, src},
+      this.props.children
+    )
   }
 }
 
 export class LazyLoadBackgroundImage extends LazyLoad<DivProps> {
-  style = Object.assign({}, this.props.style, {
-    backgroundImage: `url('${this.props.defaultImage}')`,
-    height: this.props.height,
-    width: this.props.width
-  })
-
   render() {
+    const {style: incomingStyle, height, width, image, errorImage, options, onLoaded, defaultImage, ...props} = this.props
+
+    const style = {
+      ...incomingStyle,
+      backgroundImage: `url('${defaultImage}')`,
+      height,
+      width
+    }
+
     return createElement(
       'div',
-      { ref: el => (this.ref = el), style: this.style },
+      {...props, ref: el => (this.ref = el), style},
       this.props.children
     )
   }

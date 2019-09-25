@@ -21,7 +21,7 @@ const App = () => {
   const image = 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg'
   return (
     <>
-      { /* To use a img-tag */ }
+      { /* To use an img-tag */ }
       <LazyLoadImage width={50} height="200px" defaultImage={this.defaultImage} image={this.image} />
 
       { /* To use a div-tag with background image styling */ }
@@ -42,16 +42,55 @@ See: https://stackblitz.com/edit/react-lazy-load-image for examples
 
 Both `LazyLoadImage` and `LazyLoadBackgroundImage` have the same props:
 
-```
-  defaultImage: string // Path to the default image to show before the lazy loading
-  image: string // Path to the image to be lazy loaded
-  errorImage?: string // Path to an image to show if the loading of `image` fails, will use `defaultImage` if not set
-  onLoaded?: () => void // Callback function after the image has been loaded
-  options?: ObserverOptions
-  style?: Object // Will be passed to the under lying div/img tag
-  height: number | string // The height of the image (can be set to `auto`)
-  width: number | string // The width of the image (can be set to `auto`)
-```
+##### defaultImage
+
+Type: `string`<br>
+
+Path to the default image (placeholder) to show before the lazy loading
+
+##### image
+
+Type: `string`<br>
+Default: `60`
+
+Path to the image to be lazy loaded
+
+##### errorImage?
+
+Type: `string`<br>
+
+Path to an image to show if the loading of `image` fails, will use `defaultImage` if not set
+
+##### onLoaded?
+
+Type: `() => void`<br>
+
+Callback function after the image has been loaded
+
+##### options?
+
+Type: `ObserverOptions`<br>
+
+IntersectionObserver options. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+##### style?
+
+Type: `React.CSSProperties`<br>
+
+Will be passed to the underlying div/img tag
+
+##### height
+
+Type: `() => void`<br>
+
+The height of the image (can be set to `auto`)
+
+##### width
+
+Type: `() => void`<br>
+
+The width of the image (can be set to `auto`)
+
 
 ## Requirement
 
