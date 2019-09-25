@@ -2,7 +2,7 @@
   "name": "@tjoskar/react-lazyload-img",
   "public": true,
   "description": "Lazy image loader for react",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "scripts": {
     "test": "jest",
     "prepublishOnly": "tsc --module commonjs --target es2015 --outDir dist/cjs && tsc --module es2015 --target es2015 --outDir dist/es2015",
