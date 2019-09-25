@@ -1,8 +1,8 @@
 import { Component, createElement, DetailedReactHTMLElement } from 'react'
-import { UnionProps } from './types'
+import { Props, ImgProps, DivProps } from './types'
 import { isNull, registerImageToLazyLoad } from './lazyload'
 
-abstract class LazyLoad extends Component<UnionProps> {
+abstract class LazyLoad<T extends Props> extends Component<T> {
   ref!: Element | null
 
   componentDidMount() {
@@ -13,7 +13,7 @@ abstract class LazyLoad extends Component<UnionProps> {
     registerImageToLazyLoad(this.ref, this.props)
   }
 
-  componentDidUpdate(prevProps: UnionProps) {
+  componentDidUpdate(prevProps: Props) {
     if (this.props.image !== prevProps.image && this.ref) {
       registerImageToLazyLoad(this.ref, this.props)
     }
@@ -22,7 +22,7 @@ abstract class LazyLoad extends Component<UnionProps> {
   abstract render()
 }
 
-export class LazyLoadImage extends LazyLoad {
+export class LazyLoadImage extends LazyLoad<ImgProps> {
   style = Object.assign({}, this.props.style, {
     height: this.props.height,
     width: this.props.width
@@ -37,7 +37,7 @@ export class LazyLoadImage extends LazyLoad {
   }
 }
 
-export class LazyLoadBackgroundImage extends LazyLoad {
+export class LazyLoadBackgroundImage extends LazyLoad<DivProps> {
   style = Object.assign({}, this.props.style, {
     backgroundImage: `url('${this.props.defaultImage}')`,
     height: this.props.height,
