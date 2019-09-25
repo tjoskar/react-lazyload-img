@@ -1,8 +1,8 @@
 import { Component, createElement, DetailedReactHTMLElement } from 'react'
-import { Props } from './types'
+import { Props, ImgProps, DivProps } from './types'
 import { isNull, registerImageToLazyLoad } from './lazyload'
 
-abstract class LazyLoad extends Component<Props> {
+abstract class LazyLoad<T extends Props> extends Component<T> {
   ref!: Element | null
 
   componentDidMount() {
@@ -22,7 +22,7 @@ abstract class LazyLoad extends Component<Props> {
   abstract render()
 }
 
-export class LazyLoadImage extends LazyLoad {
+export class LazyLoadImage extends LazyLoad<ImgProps> {
   render() {
     const {style: incomingStyle, height, width, image, errorImage, options, onLoaded, defaultImage: src, ...props} = this.props
 
@@ -40,7 +40,7 @@ export class LazyLoadImage extends LazyLoad {
   }
 }
 
-export class LazyLoadBackgroundImage extends LazyLoad {
+export class LazyLoadBackgroundImage extends LazyLoad<DivProps> {
   render() {
     const {style: incomingStyle, height, width, image, errorImage, options, onLoaded, defaultImage, ...props} = this.props
 
