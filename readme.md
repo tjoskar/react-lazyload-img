@@ -81,13 +81,13 @@ Will be passed to the underlying div/img tag
 
 ##### height
 
-Type: `() => void`<br>
+Type: `number | string`<br>
 
 The height of the image (can be set to `auto`)
 
 ##### width
 
-Type: `() => void`<br>
+Type: `number | string`<br>
 
 The width of the image (can be set to `auto`)
 
