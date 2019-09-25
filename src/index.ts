@@ -1,8 +1,8 @@
 import { Component, createElement, DetailedReactHTMLElement } from 'react'
-import { Props } from './types'
+import { UnionProps } from './types'
 import { isNull, registerImageToLazyLoad } from './lazyload'
 
-abstract class LazyLoad extends Component<Props> {
+abstract class LazyLoad extends Component<UnionProps> {
   ref!: Element | null
 
   componentDidMount() {
@@ -13,7 +13,7 @@ abstract class LazyLoad extends Component<Props> {
     registerImageToLazyLoad(this.ref, this.props)
   }
 
-  componentDidUpdate(prevProps: Props) {
+  componentDidUpdate(prevProps: UnionProps) {
     if (this.props.image !== prevProps.image && this.ref) {
       registerImageToLazyLoad(this.ref, this.props)
     }
