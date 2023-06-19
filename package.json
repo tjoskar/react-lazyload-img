@@ -22,7 +22,7 @@
     "parcel-bundler": "^1.12.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "simple-spy": "^3.0.1",
+    "simple-spy": "^4.0.0",
     "ts-jest": "^27.0.0",
     "typescript": "^4.0.0"
   },
